@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,inital-scale-1.0">
+        <title>Mail Dispatcher</title>
+        <link rel="icon" href="Tab icon.png" type="image/x-icon">
+        <link rel="stylesheet" href="mailStyle.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  emailjs.init("47MQR6HuC-2cjV_T8"); // Replace with your EmailJS user ID
+</script>
+
+        <header>
+            <div class="logo">MMD</div>
+            <div class="logo-text">Mass Mail Dispatcher</div>
+            <nav>
+                <ul id="menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#compose">Compose</a></li>
+                </ul>
+            </nav>
+        </header>
+          <!--Image and Heading Section-->
+          <div class="content-container">
+           
+                <div class="text-container">
+                    <h1>Welcome to Mass Mail Dispatcher</h1>
+                    <p>
+                        A mass mail dispatcher is a tool or system used to send bulk emails to multiple recipients simultaneously. It is commonly used for announcements, updates, promotional campaigns, or notifications. The dispatcher ensures efficient delivery, allows customization of messages, and may include tracking features like open rates and click-through rates.
+                    </p>
+                </div>
+                <div class="image-container">
+                    <img src="Screenshot 2024-12-30 123816.png" alt="Image description">
+                </div>
+           
+        </div>
+
+        <!-- Mail Dispatcher Form Section -->
+         <div id="compose" class="content-container">
+            <center><h1><p id="heading">Mass Mail Dispatcher Form</p></h1></center>
+            <form method="post">
+
+
+               <label for="senderEmail">Form:</label>
+               <input type="email" id="senderEmail" name="senderEmail" required>
+
+
+               <br><br><br>
+                  
+               <label for="subject">Subject:</label>
+               <textarea id="subject" name="subject" required></textarea>
+
+               <br><br><br><br>
+
+               <label for="csvFile">CSV File:</label>
+               <input type="file" id="csvFile" name="csvFile" accept=".csv" required>
+
+
+               <br><br>
+
+               <label for="message">Message:</label>
+               <textarea id="message" name="message" required></textarea>
+
+               <br><br>
+
+               <div class="upload-valid">
+                <button onclick="sendEmails()">Upload and Validate</button>
+              
+                <div class="email-container">
+                  <div class="email-section">
+                    <h3>Valid Emails: <span id="validEmailCount">0</span></h3>
+                    <div id="validEmails"></div>
+                  </div>
+                  <div class="email-section">
+                    <h3>Invalid Emails: <span id="invalidEmailCount">0</span></h3>
+                    <div id="invalidEmails"></div>
+                  </div>
+                </div>
+                 
+            <!-- SEND MAIL TO USER-->
+            <button id="sendButton" onclick="sendMailToUsers()" disabled>Send Emails</button>
+              </div>
+              
+            
+               
+            </form>
+         </div>
+           
+
+        <!-- LInk to JavaScript -->
+         <script src="mailJs.js"></script>
+    </body>
+</html>

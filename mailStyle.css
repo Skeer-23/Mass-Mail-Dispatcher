@@ -1,0 +1,253 @@
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+header {
+    width: 100%;
+    background-color: #B0E0E6;
+    color: rgb(17, 15, 15);
+    padding: 20px 20px;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+body {
+    margin:0;
+    padding:0;
+    overflow-x:hidden;
+    
+}
+
+/* Navigation Menu */
+#menu {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+}
+
+#menu li {
+    margin-left: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(17, 15, 15);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0077cc;
+}
+
+/* Content and Image Styling */
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Align to the left */
+    height:100vh;
+    padding:0 20px;
+}
+.text-container{
+    flex:1;
+    padding-right:20px;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+   
+}
+.text-container h1{
+    font-size:2rem;
+    color:#333;
+}
+.text-container p{
+    font-size:1.25rem;
+    color:#555;
+    line-height:1.6;
+}
+.image-container {
+    flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height: calc(100vh - 200px);
+    padding-top:100px;
+    padding-right:20px;
+    padding-bottom:100px;
+    overflow:hidden;
+    border-radius: 20px;
+}
+
+.image-container img {
+    width: 100vw; /* Fill the container's width */
+    height:100vh;
+    object-fit:cover;
+}
+
+@media(max-width: 1024px) {
+    .content-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-container {
+        height: auto; /* Let the image height adjust */
+        padding-top: 50px; /* Reduced padding for smaller screens */
+        padding-bottom: 50px; /* Reduced padding for smaller screens */
+    }
+}
+
+/* For screen widths less than or equal to 768px */
+@media(max-width: 768px) {
+    .content-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-container {
+        padding-right: 0; /* Remove right padding */
+        padding-left: 20px; /* Optional: add left padding */
+    }
+
+    .image-container {
+        height: auto; /* Let the image height adjust */
+        padding-top: 30px; /* Further reduced padding for smaller screens */
+        padding-bottom: 30px; /* Further reduced padding for smaller screens */
+    }
+
+    .text-container h1 {
+        font-size: 1.5rem; /* Smaller font size for smaller screens */
+    }
+
+    .text-container p {
+        font-size: 1.1rem; /* Smaller font size for smaller screens */
+    }
+}
+ 
+.container
+{
+    h1 {
+        text-align: center;
+        font-family: Arial, sans-serif;
+        color: #333;
+        margin-top: 20px;
+    }
+    .txt-rotate {
+        font-weight: bold;
+        font-size: 2em;
+    }
+}
+
+/* Form Styling */
+#heading {
+    padding-right:10px;
+}
+form{
+    width:100%;
+    padding:20px;
+    background-color:#f8f9fa;
+    border-radius:8px;
+    margin-top: 20px;
+}
+form label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:bold;
+}
+form input, form textarea{
+    width:100%;
+    padding:10px;
+    margin-bottom:15px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+form input[type="button"]{
+   background-color: #4CAF50;
+   color:white;
+   cursor:poiner;
+}
+form input[type="button"]:hover{
+    background-color:#45a049;
+}
+#validEmailCount,#invalidEmailCount {
+    font-weight:bold;
+}
+
+
+/* Responsive styles for screens <= 1024px */
+@media (max-width: 1024px) {
+    #heading {
+        font-size: 1.5rem; /* Reduce the font size for smaller screens */
+        margin-bottom: 20px; /* Adjust spacing below heading */
+    }
+
+    #form {
+        margin-top: 15px; /* Reduce spacing above the form */
+        padding: 5px; /* Adjust padding for compactness */
+    }
+}
+
+/* UPLOAD AND VALID SECTION */
+.upload-valid {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  .email-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .email-section {
+    flex: 1;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .email-section h3 {
+    margin-bottom: 10px;
+  }
+  
+  #validEmails,
+  #invalidEmails {
+    max-height: 200px;
+    overflow-y: auto;
+    font-size: 14px;
+    text-align: left;
+    color: #333;
+  }
+
+  
+  #sendButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  #sendButton:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
